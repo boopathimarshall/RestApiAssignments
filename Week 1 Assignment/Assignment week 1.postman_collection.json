@@ -1,0 +1,182 @@
+{
+	"info": {
+		"_postman_id": "dd233f22-92df-43fc-a4cb-d7edc15cd1f9",
+		"name": "Assignment week 1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25445696"
+	},
+	"item": [
+		{
+			"name": "Create and validate description",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Description Validation\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"This is Testing\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"result\": {\r\n        \"parent\": \"\",\r\n        \"reason\": \"\",\r\n        \"watch_list\": \"\",\r\n        \"upon_reject\": \"cancel\",\r\n        \"sys_updated_on\": \"2023-01-28 02:50:04\",\r\n        \"type\": \"normal\",\r\n        \"approval_history\": \"\",\r\n        \"number\": \"CHG0030012\",\r\n        \"test_plan\": \"\",\r\n        \"cab_delegate\": \"\",\r\n        \"requested_by_date\": \"\",\r\n        \"state\": \"-5\",\r\n        \"sys_created_by\": \"admin\",\r\n        \"knowledge\": \"false\",\r\n        \"order\": \"\",\r\n        \"phase\": \"requested\",\r\n        \"cmdb_ci\": \"\",\r\n        \"delivery_plan\": \"\",\r\n        \"contract\": \"\",\r\n        \"impact\": \"3\",\r\n        \"active\": \"true\",\r\n        \"work_notes_list\": \"\",\r\n        \"priority\": \"4\",\r\n        \"sys_domain_path\": \"/\",\r\n        \"cab_recommendation\": \"\",\r\n        \"production_system\": \"false\",\r\n        \"review_date\": \"\",\r\n        \"business_duration\": \"\",\r\n        \"group_list\": \"\",\r\n        \"requested_by\": {\r\n            \"link\": \"https://dev119496.service-now.com/api/now/table/sys_user/6816f79cc0a8016401c5a33be04be441\",\r\n            \"value\": \"6816f79cc0a8016401c5a33be04be441\"\r\n        },\r\n        \"change_plan\": \"\",\r\n        \"approval_set\": \"\",\r\n        \"implementation_plan\": \"\",\r\n        \"universal_request\": \"\",\r\n        \"end_date\": \"\",\r\n        \"short_description\": \"Testing\",\r\n        \"correlation_display\": \"\",\r\n        \"delivery_task\": \"\",\r\n        \"work_start\": \"\",\r\n        \"additional_assignee_list\": \"\",\r\n        \"outside_maintenance_schedule\": \"false\",\r\n        \"std_change_producer_version\": \"\",\r\n        \"service_offering\": \"\",\r\n        \"sys_class_name\": \"change_request\",\r\n        \"closed_by\": \"\",\r\n        \"follow_up\": \"\",\r\n        \"reassignment_count\": \"0\",\r\n        \"review_status\": \"\",\r\n        \"assigned_to\": \"\",\r\n        \"start_date\": \"\",\r\n        \"sla_due\": \"\",\r\n        \"comments_and_work_notes\": \"\",\r\n        \"escalation\": \"0\",\r\n        \"upon_approval\": \"proceed\",\r\n        \"correlation_id\": \"\",\r\n        \"made_sla\": \"true\",\r\n        \"backout_plan\": \"\",\r\n        \"conflict_status\": \"Not Run\",\r\n        \"task_effective_number\": \"CHG0030012\",\r\n        \"sys_updated_by\": \"admin\",\r\n        \"opened_by\": {\r\n            \"link\": \"https://dev119496.service-now.com/api/now/table/sys_user/6816f79cc0a8016401c5a33be04be441\",\r\n            \"value\": \"6816f79cc0a8016401c5a33be04be441\"\r\n        },\r\n        \"user_input\": \"\",\r\n        \"sys_created_on\": \"2023-01-28 02:50:04\",\r\n        \"on_hold_task\": \"\",\r\n        \"sys_domain\": {\r\n            \"link\": \"https://dev119496.service-now.com/api/now/table/sys_user_group/global\",\r\n            \"value\": \"global\"\r\n        },\r\n        \"route_reason\": \"\",\r\n        \"closed_at\": \"\",\r\n        \"review_comments\": \"\",\r\n        \"business_service\": \"\",\r\n        \"time_worked\": \"\",\r\n        \"chg_model\": {\r\n            \"link\": \"https://dev119496.service-now.com/api/now/table/chg_model/007c4001c343101035ae3f52c1d3aeb2\",\r\n            \"value\": \"007c4001c343101035ae3f52c1d3aeb2\"\r\n        },\r\n        \"expected_start\": \"\",\r\n        \"opened_at\": \"2023-01-28 02:50:04\",\r\n        \"work_end\": \"\",\r\n        \"phase_state\": \"open\",\r\n        \"work_notes\": \"\",\r\n        \"close_code\": \"\",\r\n        \"assignment_group\": \"\",\r\n        \"description\": \"This is Testing\",\r\n        \"on_hold_reason\": \"\",\r\n        \"calendar_duration\": \"\",\r\n        \"close_notes\": \"\",\r\n        \"sys_id\": \"382ad75347202110f6c1d855d36d430e\",\r\n        \"contact_type\": \"\",\r\n        \"cab_required\": \"false\",\r\n        \"urgency\": \"3\",\r\n        \"scope\": \"3\",\r\n        \"company\": \"\",\r\n        \"justification\": \"\",\r\n        \"activity_due\": \"\",\r\n        \"comments\": \"\",\r\n        \"approval\": \"not requested\",\r\n        \"due_date\": \"\",\r\n        \"sys_mod_count\": \"0\",\r\n        \"on_hold\": \"false\",\r\n        \"sys_tags\": \"\",\r\n        \"cab_date_time\": \"\",\r\n        \"conflict_last_run\": \"\",\r\n        \"unauthorized\": \"false\",\r\n        \"location\": \"\",\r\n        \"risk\": \"3\",\r\n        \"category\": \"Other\",\r\n        \"risk_impact_analysis\": \"\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://dev119496.service-now.com/api/now/table/change_request/382ad75347202110f6c1d855d36d430e?sysparm_fields=description,short_description",
+					"protocol": "https",
+					"host": [
+						"dev119496",
+						"service-now",
+						"com"
+					],
+					"path": [
+						"api",
+						"now",
+						"table",
+						"change_request",
+						"382ad75347202110f6c1d855d36d430e"
+					],
+					"query": [
+						{
+							"key": "sysparm_fields",
+							"value": "description,short_description"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(204);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://dev119496.service-now.com/api/now/table/change_request/9cc0635f47202110f6c1d855d36d432b",
+					"protocol": "https",
+					"host": [
+						"dev119496",
+						"service-now",
+						"com"
+					],
+					"path": [
+						"api",
+						"now",
+						"table",
+						"change_request",
+						"9cc0635f47202110f6c1d855d36d432b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Request with XML",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "<request>\r\n    <entry>\r\n        <description>this is test</description>\r\n        <short_description>This is short</short_description>\r\n    </entry>\r\n</request>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://dev119496.service-now.com/api/now/table/change_request",
+					"protocol": "https",
+					"host": [
+						"dev119496",
+						"service-now",
+						"com"
+					],
+					"path": [
+						"api",
+						"now",
+						"table",
+						"change_request"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "password",
+				"value": "gDsk4v@8A+GG",
+				"type": "string"
+			},
+			{
+				"key": "username",
+				"value": "admin",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
