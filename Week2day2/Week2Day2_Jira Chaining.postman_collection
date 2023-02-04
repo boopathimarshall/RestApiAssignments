@@ -1,0 +1,148 @@
+{
+	"info": {
+		"_postman_id": "06ebdf9c-84f1-4594-8cd3-eca568ca3b3b",
+		"name": "Jira Chaining",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25445696"
+	},
+	"item": [
+		{
+			"name": "Create Issue",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var resp = pm.response.json();\r",
+							"var ID =resp.id;\r",
+							"pm.globals.set(\"KeyID\", ID);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"fields\": {\r\n        \"project\": {\r\n            \"key\": \"TS\"\r\n        },\r\n        \"summary\": \"create issue in Jira From Postman\",\r\n        \"description\": \"Creating of an issue using project keys and issue type names using the Postman\",\r\n        \"issuetype\": {\r\n            \"name\": \"Bug\"\r\n        }\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://boopathimarshallrest.atlassian.net/rest/api/2/issue/",
+					"protocol": "https",
+					"host": [
+						"boopathimarshallrest",
+						"atlassian",
+						"net"
+					],
+					"path": [
+						"rest",
+						"api",
+						"2",
+						"issue",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Issue",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"fields\": {\r\n        \"description\": \"Bug Updated Using Postman for testing\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://boopathimarshallrest.atlassian.net/rest/api/2/issue/{{KeyID}}",
+					"protocol": "https",
+					"host": [
+						"boopathimarshallrest",
+						"atlassian",
+						"net"
+					],
+					"path": [
+						"rest",
+						"api",
+						"2",
+						"issue",
+						"{{KeyID}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Issue",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://boopathimarshallrest.atlassian.net/rest/api/2/issue/{{KeyID}}",
+					"protocol": "https",
+					"host": [
+						"boopathimarshallrest",
+						"atlassian",
+						"net"
+					],
+					"path": [
+						"rest",
+						"api",
+						"2",
+						"issue",
+						"{{KeyID}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "username",
+				"value": "boopathimarshall@gmail.com",
+				"type": "string"
+			},
+			{
+				"key": "password",
+				"value": "kCxfKFYKT7hZ4WzzNSyS7483",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
