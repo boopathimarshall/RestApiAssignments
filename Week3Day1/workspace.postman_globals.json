@@ -1,0 +1,27 @@
+{
+	"id": "0ebf18d4-b2dc-407a-8656-ade89463855d",
+	"values": [
+		{
+			"key": "SysID",
+			"value": "",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "KeyID",
+			"value": "",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "Bearer",
+			"value": "",
+			"type": "default",
+			"enabled": true
+		}
+	],
+	"name": "Globals",
+	"_postman_variable_scope": "globals",
+	"_postman_exported_at": "2023-02-04T17:18:19.633Z",
+	"_postman_exported_using": "Postman/10.8.7"
+}

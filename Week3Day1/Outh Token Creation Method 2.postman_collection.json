@@ -1,0 +1,127 @@
+{
+	"info": {
+		"_postman_id": "298e6e5a-121f-4dea-bd58-1eeb17d89457",
+		"name": "Outh Token Creation Method 2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25445696"
+	},
+	"item": [
+		{
+			"name": "New Request",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var resp = pm.response.json();\r",
+							"var bear = resp.access_token;\r",
+							"pm.globals.set(\"Bearer\", bear);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "password",
+							"type": "text"
+						},
+						{
+							"key": "client_id",
+							"value": "4459f3ad0d302110bc581c4da13f9686",
+							"type": "text"
+						},
+						{
+							"key": "client_secret",
+							"value": "I9Cd&7n`XS",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "text"
+						},
+						{
+							"key": "scope",
+							"value": "global",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "gDsk4v@8A+GG",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://dev119496.service-now.com/oauth_token.do",
+					"protocol": "https",
+					"host": [
+						"dev119496",
+						"service-now",
+						"com"
+					],
+					"path": [
+						"oauth_token.do"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Incident",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{Bearer}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://dev119496.service-now.com/api/now/table/incident",
+					"protocol": "https",
+					"host": [
+						"dev119496",
+						"service-now",
+						"com"
+					],
+					"path": [
+						"api",
+						"now",
+						"table",
+						"incident"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
